@@ -175,3 +175,5 @@ cython_debug/
 
 measurement/*
 !measurement/.gitkeep
+
+*.yaml
