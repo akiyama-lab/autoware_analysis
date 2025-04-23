@@ -8,9 +8,9 @@
 1. `autoware`を起動
 
 ```bash
-cd autoware_caret
+cd autoware
 ulimit -n 65534
-source caret/setenv_caret.bash
+source ~/caret/setenv_caret.bash
 source ./install/local_setup.bash
 source ~/autoware_analysis/caret_topic_filter.bash
 ros2 launch autoware_launch logging_simulator.launch.xml map_path:=$HOME/autoware_map/sample-map-rosbag vehicle_model:=sample_vehicle sensor_model:=sample_sensor_kit
@@ -19,7 +19,7 @@ ros2 launch autoware_launch logging_simulator.launch.xml map_path:=$HOME/autowar
 2. `rosbag`を再生(別のターミナルで実行)
 
 ```bash
-cd autoware_caret
+cd autoware
 source ./install/local_setup.bash
 ros2 topic pub /vehicle/status/control_mode autoware_vehicle_msgs/msg/ControlModeReport "mode: 0" --once
 ros2 bag play ~/autoware_map/sample-rosbag/ -r 0.2 -s sqlite3
