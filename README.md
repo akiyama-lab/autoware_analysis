@@ -32,3 +32,10 @@ export ROS_TRACE_DIR=~/autoware_analysis/measurement
 source caret/install/local_setup.bash
 ros2 caret record -f 10000 --light
 ```
+
+## transform
+
+[lttng_to_architecture.py](https://github.com/akiyama-lab/autoware_analysis/blob/main/lttng_to_architecture.py)でLttngからArchitectureファイルに変換します。
+
+環境変数`LTTNG_TRACE_DIR`や`ARCHITECTURE_FILE_PATH`で、パスを指定することができます。
+指定がない場合、lttngトレースデータはmeasurementフォルダでタイムスタンプが最新のものを、Architectureファイルは`/home/akilab/autoware_analysis/architecture.yaml`が指定されます。
